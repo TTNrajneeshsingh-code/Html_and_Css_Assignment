@@ -1,0 +1,337 @@
+* {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            padding: 20px;
+        }
+
+
+        header {
+            margin-bottom: 30px;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 15px;
+        }
+
+
+
+        nav p {
+            font-size: 0.9rem;
+            max-width: 400px;
+            line-height: 1.5;
+        }
+
+
+        .search_bar {
+            display: flex;
+            align-items: center;
+            border: 1px solid gray;
+            border-radius: 50px;
+            padding: 8px 15px;
+            width: 100%;
+            max-width: 350px;
+        }
+
+        .search_bar input {
+            border: none;
+            outline: none;
+            width: 100%;
+            margin-left: 10px;
+        }
+
+
+        section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+
+        .post_card {
+            display: flex;
+            border: 1px solid gray;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #fff;
+            height: 180px;
+        }
+
+        .card_img {
+            width: 40%;
+            flex-shrink: 0;
+            overflow: hidden;
+        }
+
+        .card_img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card_info {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .card_info_options {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+
+            gap: 10px;
+
+            margin-bottom: 1em;
+        }
+
+
+        .card_info_detailes {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+        }
+
+
+
+        .card_meta_row {
+            display: flex;
+            gap: 15px;
+            font-size: 0.75rem;
+            color: gray;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: gray;
+        }
+
+        p.card_desc {
+            font-size: 0.85rem;
+            color: gray;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        a.read_more {
+            text-decoration: none;
+            color: blue;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+
+        .desktop_only_card {
+            display: none;
+        }
+
+
+        .main_card {
+            display: none;
+        }
+
+
+        @media screen and (min-width: 750px) {
+            section {
+                flex-direction: row;
+            }
+
+            .post_card {
+                flex-direction: column;
+                width: 32%;
+                height: auto;
+            }
+
+            .search_bar {
+                display: none;
+            }
+
+            .card_img {
+                width: 100%;
+                height: 200px;
+            }
+
+
+            .last-img {
+                display: none;
+            }
+
+
+            .last {
+                display: none;
+            }
+
+
+        }
+
+
+        @media screen and (min-width: 1200px) {
+
+            section {
+                max-width: 1200px;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .post_card {
+                width: 33%;
+            }
+
+
+
+
+            .post_section {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                display: flex;
+                max-width: 1200px;
+                margin: 0 auto;
+                gap: 30px;
+                align-items: flex-start;
+            }
+
+
+            .main_card {
+                display: flex;
+                border: 1px solid grey;
+                border-radius: 12px;
+                overflow: hidden;
+                flex-direction: column;
+                width: 60%;
+
+            }
+
+            .featured-image-box {
+                width: 100%;
+                height: 420px;
+                background-color: #eee;
+            }
+
+            .featured-image-box img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .featured_content {
+                padding: 25px;
+            }
+
+            .featured_content h2 {
+                margin-bottom: 10px;
+            }
+
+            .featured_content p {
+                margin-bottom: 15px;
+                line-height: 1.6;
+            }
+
+            .featured_content a {
+                color: blue;
+                font-weight: bold;
+                text-decoration: none;
+            }
+
+            .main_card_footer {
+                display: flex;
+                gap: 30px;
+                margin-top: 20px;
+                padding-top: 20px;
+                border-top: 1px solid #eee;
+                color: gray;
+                font-size: 1rem;
+            }
+
+            .post_card_info {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                padding: 20px;
+            }
+
+
+            .post_card_sub_info {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-top: 10px;
+            }
+
+            .post_card_img {
+                position: relative;
+                height: 100%;
+                width: 400px;
+                overflow: hidden;
+
+                border-radius: 15px 0 0 15px;
+
+            }
+
+            .post_card_img img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+
+            a {
+                text-decoration: none;
+            }
+
+
+            .right_side_post_section {
+
+
+                gap: 35px;
+            }
+
+
+            .post_card {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+
+                height: 200px;
+
+                border: 1px solid grey;
+                border-radius: 10px;
+                overflow: hidden;
+            }
+
+
+            .card_img {
+                width: 140px;
+
+                height: 100%;
+                flex-shrink: 0;
+            }
+
+
+
+            .last-img {
+                display: block;
+            }
+
+
+            .last {
+                display: block;
+            }
+
+
+
+        }
